@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Рекомендации после имплантации</title>
+  <style>
+    :root {
+      --bg: #f0f7f9;
+      --card: #ffffff;
+      --accent: #2a9d8f;
+      --accent-light: #e8f5f3;
+      --text: #1a2e35;
+      --muted: #5a7179;
+      --border: #d4e4e8;
+      --check: #264653;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      padding: 2rem 1rem 3rem;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 1.85rem);
+      font-weight: 700;
+      color: var(--check);
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+
+    .subtitle {
+      font-size: 1.05rem;
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    .section {
+      background: var(--card);
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      margin-bottom: 1.25rem;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(26, 46, 53, 0.06);
+    }
+
+    .section-header {
+      background: var(--accent-light);
+      padding: 0.85rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .section-badge {
+      background: var(--accent);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+
+    .section-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--check);
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0.5rem 0;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+
+    .checklist li:last-child {
+      border-bottom: none;
+    }
+
+    .checklist li:hover {
+      background: #fafcfd;
+    }
+
+    .checklist li.done {
+      opacity: 0.55;
+    }
+
+    .checklist li.done .item-text {
+      text-decoration: line-through;
+    }
+
+    .checklist input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      flex-shrink: 0;
+      accent-color: var(--accent);
+      cursor: pointer;
+    }
+
+    .item-text {
+      flex: 1;
+      font-size: 0.95rem;
+    }
+
+    .item-text strong {
+      display: block;
+      font-weight: 600;
+      color: var(--check);
+      margin-bottom: 0.15rem;
+    }
+
+    .item-text span {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .notice {
+      background: #fff8e6;
+      border: 1px solid #f0d78c;
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      font-size: 0.88rem;
+      color: #7a5c00;
+      margin-top: 1.5rem;
+    }
+
+    .notice strong {
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="icon" aria-hidden="true">🦷</div>
+      <h1>Поздравляем, вы на пути к новой улыбке</h1>
+      <p class="subtitle">Соблюдайте следующие рекомендации</p>
+    </header>
+
+    <section class="section">
+      <div class="section-header">
+        <span class="section-badge">Сразу после</span>
+        <span class="section-title">Первые 2–3 часа</span>
+      </div>
+      <ul class="checklist">
+        <li>
+          <input type="checkbox" id="c1">
+          <label class="item-text" for="c1">
+            <strong>Держите тампон 20–30 минут</strong>
+            <span>Аккуратно прикусите марлевый тампон для остановки кровотечения. Не трогайте область операции языком или пальцами.</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="c2">
+          <label class="item-text" for="c2">
+            <strong>Не ешьте и не пейте</strong>
+            <span>Дождитесь, пока действие анестезии полностью пройдёт — обычно 2–3 часа.</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="c3">
+          <label class="item-text" for="c3">
+            <strong>Отдыхайте</strong>
+            <span>Избегайте физических нагрузок. По возможности не наклоняйте голову вниз.</span>
+          </label>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <span class="section-badge">1-й день</span>
+        <span class="section-title">Первые 24 часа</span>
+      </div>
+      <ul class="checklist">
+        <li>
+          <input type="checkbox" id="c4">
+          <label class="item-text" for="c4">
+            <strong>Не полощите рот и не сплёвывайте</strong>
+            <span>Это может сорвать сгусток и вызвать кровотечение. Просто проглатывайте слюну.</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="c5">
+          <label class="item-text" for="c5">
+            <strong>Прикладывайте холод</strong>
+            <span>Холодный компресс на щёку по 15 минут через каждые 15 минут — помогает уменьшить отёк.</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="c6">
+          <label class="item-text" for="c6">
+            <strong>Ешьте мягкую еду комнатной температуры</strong>
+            <span>Йогурт, пюре, суп. Жуйте на противоположной стороне. Избегайте горячего, острого и твёрдого.</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="c7">
+          <label class="item-text" for="c7">
+            <strong>Не курите и не употребляйте алкоголь</strong>
+            <span>Курение и алкоголь замедляют заживление и повышают риск осложнений.</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="c8">
+          <label class="item-text" for="c8">
+            <strong>Принимайте назначенные препараты</strong>
+            <span>Обезболивающие и антибиотики — строго по схеме, которую назначил врач.</span>
+          </label>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <span class="section-badge">2–7 дней</span>
+        <span class="section-title">Первая неделя</span>
+      </div>
+      <ul class="checklist">
+        <li>
+          <input type="checkbox" id="c9">
+          <label class="item-text" for="c9">
+            <strong>Продолжайте мягкую диету</strong>
+            <span>Избегайте орехов, семечек, хлебных корок и других твёрдых продуктов.</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="c10">
+          <label class="item-text" for="c10">
+            <strong>Аккуратно чистите зубы</strong>
+            <span>Обходите область импланта. Используйте мягкую щётку. Не трите швы.</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="c11">
+          <label class="item-text" for="c11">
+            <strong>Начните солевые полоскания</strong>
+            <span>С 2-го дня — тёплая вода с чайной ложкой соли, 2–3 раза в день после еды. Без резких движений.</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="c12">
+          <label class="item-text" for="c12">
+            <strong>Спите на высокой подушке</strong>
+            <span>Это помогает уменьшить отёк в первые ночи.</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="c13">
+          <label class="item-text" for="c13">
+            <strong>Не занимайтесь спортом</strong>
+            <span>Исключите тренировки, подъём тяжестей и баню/сауну минимум на неделю.</span>
+          </label>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <span class="section-badge">7–14 дней</span>
+        <span class="section-title">Вторая неделя</span>
+      </div>
+      <ul class="checklist">
+        <li>
+          <input type="checkbox" id="c14">
+          <label class="item-text" for="c14">
+            <strong>Посетите контрольный осмотр</strong>
+            <span>Приходите на приём в назначенный день — врач оценит заживление.</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="c15">
+          <label class="item-text" for="c15">
+            <strong>Снимите швы (если не рассасывающиеся)</strong>
+            <span>Обычно через 7–10 дней. Только у врача, самостоятельно не снимайте.</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="c16">
+          <label class="item-text" for="c16">
+            <strong>Постепенно возвращайтесь к обычному питанию</strong>
+            <span>Добавляйте более плотную пищу, но пока избегайте жёсткого жевания на стороне импланта.</span>
+          </label>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <span class="section-badge">Долгосрочно</span>
+        <span class="section-title">Уход и профилактика</span>
+      </div>
+      <ul class="checklist">
+        <li>
+          <input type="checkbox" id="c17">
+          <label class="item-text" for="c17">
+            <strong>Чистите зубы 2 раза в день</strong>
+            <span>Используйте мягкую щётку и зубную нить или ирригатор, как рекомендует врач.</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="c18">
+          <label class="item-text" for="c18">
+            <strong>Посещайте стоматолога каждые 6 месяцев</strong>
+            <span>Регулярные осмотры и профессиональная гигиена продлевают срок службы импланта.</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="c19">
+          <label class="item-text" for="c19">
+            <strong>Сообщайте врачу о любых изменениях</strong>
+            <span>Боль, подвижность, покраснение или неприятный запах — повод немедленно обратиться в клинику.</span>
+          </label>
+        </li>
+      </ul>
+    </section>
+
+    <div class="notice">
+      <strong>⚠️ Когда срочно звонить врачу:</strong>
+      Сильное кровотечение, которое не останавливается, нарастающий отёк после 3-го дня, высокая температура (выше 38 °C), острая боль, не снимаемая обезболивающими.
+    </div>
+
+    <footer>
+      Следуйте индивидуальным рекомендациям вашего лечащего врача — они имеют приоритет.
+    </footer>
+  </div>
+
+  <script>
+    document.querySelectorAll('.checklist input[type="checkbox"]').forEach(function (checkbox) {
+      checkbox.addEventListener('change', function () {
+        this.closest('li').classList.toggle('done', this.checked);
+      });
+    });
+  </script>
+</body>
+</html>
