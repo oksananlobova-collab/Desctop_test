@@ -41,9 +41,62 @@
       margin-bottom: 2.5rem;
     }
 
-    .icon {
-      font-size: 2.5rem;
+    .logo {
+      display: block;
+      max-width: 200px;
+      height: auto;
+      margin: 0 auto 1.25rem;
+    }
+
+    .contacts {
+      background: var(--card);
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(26, 46, 53, 0.06);
+    }
+
+    .contacts__title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--accent);
       margin-bottom: 0.75rem;
+    }
+
+    .contacts__clinic {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--check);
+      margin-bottom: 0.35rem;
+    }
+
+    .contacts__address {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .contacts__phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      background: var(--accent-light);
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .contacts__phone:hover {
+      background: var(--accent);
+      color: white;
     }
 
     h1 {
@@ -176,10 +229,19 @@
 <body>
   <div class="container">
     <header>
-      <div class="icon" aria-hidden="true">🦷</div>
+      <a href="https://doctor-r.ru" target="_blank" rel="noopener">
+        <img class="logo" src="assets/logo.svg" alt="Клиника «Стимул»">
+      </a>
       <h1>Поздравляем, вы на пути к новой улыбке</h1>
       <p class="subtitle">Соблюдайте следующие рекомендации</p>
     </header>
+
+    <div class="contacts">
+      <div class="contacts__title">Контакты клиники</div>
+      <div class="contacts__clinic">Клиника «Стимул»</div>
+      <div class="contacts__address">г. Москва, ул. Ярцевская, 28</div>
+      <a class="contacts__phone" href="tel:+74950092609">+7 (495) 009-26-09</a>
+    </div>
 
     <section class="section">
       <div class="section-header">
